@@ -1,0 +1,110 @@
+* { 
+    box-sizing: border-box; 
+}
+
+body, html { 
+    height: 100%; 
+}
+
+.game {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body { 
+    background-color: #000000; 
+    color: #ffffff; 
+}
+
+h1 { 
+    display: inline;
+    font-family: "Playfair Display"; 
+    font-size: 30px; 
+    margin: 0; 
+}
+
+.container {
+    width: 1024px; 
+    margin: 0 auto;
+}
+
+/*Диалоговое окно для перезагрузки */
+.game-over-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+} 
+
+
+/* Стили для кнопок */
+#play-again-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#play-again-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Полоска жизни над персонажами*/
+.health {
+    height: 3px; 
+    background-color: green; 
+    transition: width 0.3s ease;
+}
+
+
+/*Игровое поле*/
+.field { 
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+    gap: 0;
+    border: 2px solid #d0d0d0; 
+    width: 1024px;
+    height: 640px; 
+    margin: 0 0 20px 0;  
+    background-color: #000000;
+}
+
+/* Пол, стена, враги, бустеры и герой*/
+.tile { 
+    background-size: 100%;  
+    background-image: url(images/tile-.png); 
+}
+
+.tileW { 
+    background-size: 100%;
+    background-image: url(images/tile-W.png); 
+}
+.tileE { 
+    background-size: 100%;
+    background-image: url(images/tile-E.png); 
+}
+
+.tileP { 
+    background-size: 100%;
+    background-image: url(images/tile-P.png);
+}
+
+.tileHP {
+    background-size: 100%;
+    background-image: url(images/tile-HP.png);
+}
+.tileSW {
+    background-size: 100%;
+    background-image: url(images/tile-SW.png); 
+}
